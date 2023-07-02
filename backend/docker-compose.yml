@@ -1,0 +1,17 @@
+version: "3.5"
+
+networks:
+    castle_net:
+        external: false
+
+services:
+    server:
+        build: .
+        container_name: castles_api_server
+        networks:
+            - castle_net
+        volumes:
+            - /var/nonsense:/data
+            - /var/www/nonsense/files:/files
+        ports:
+            - "${HTTP_PORT}:80"
