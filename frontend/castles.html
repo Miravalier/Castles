@@ -1,16 +1,80 @@
 <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script defer src="/js/fontawesome.js"></script>
+    <script defer src="/js/solid.js"></script>
+
     <script src="./castles.js"></script>
     <link rel="stylesheet" href="./castles.css">
-    <link rel="icon" type="image/svg" href="/favicon.svg">
+    <link rel="icon" type="image/svg" href="./favicon.svg">
     <title>Castles (Card Game)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Prompt&display=swap" rel="stylesheet">
 </head>
 
 <div id="page-select">
-    <div class="page" data-page="deck-viewer"></div>
+    <div class="page" data-page="rules"><i class="fa-solid fa-book fa-sm"></i>Rules</div>
+    <div class="page" data-page="decks"><i class="fa-solid fa-cards fa-sm"></i>Decks</div>
 </div>
 
 <div id="page-display">
-    <div class="page" data-page="deck-viewer">
+    <div class="page" data-page="rules">
+        <h1>Setting Up</h1>
+        <div class="list">
+            <p>• Give each player a standard 52-card deck with 2 jokers added. Each player shuffles their deck.</p>
+            <p>• The Wall: Each player sets 5 cards on the table face-down in landscape orientation.</p>
+            <p>• The Garrison: Each player sets 3 cards on the table face-down in portrait orientation.</p>
+            <p>• The Hand: Each player draws 3 cards from the deck as their starting hand. Players may keep their hand
+                hidden from other players.</p>
+            <p>• Randomly determine a player to take the first turn, then players take turns proceeding clockwise.</p>
+        </div>
+
+        <h1>Taking a Turn</h1>
+        <div class="list">
+            <p>• Draw until you have 5 cards in your hand.</p>
+            <p>• The player to your left at the start of your turn is your opponent for this turn.</p>
+            <p>• Select one card as your army, and one card as your general for this turn.</p>
+            <p>• With your army card, you must attack your opponent's wall cards until your army card is defeated or
+                your opponent has no cards remaining on their wall.</p>
+            <p>• To attack, compare the number on the two cards. The card with the lower number is usually defeated and
+                placed into the discard pile, with some exceptions:</p>
+            <div class="list">
+                <p>◦ Aces have a value of 1. Jacks are 11, Queens are 12, and Kings are 13.</p>
+                <p>◦ If the lower number is exactly half the value of the higher number, the lower number wins. (Note
+                    that this means Sixes beat Queens)</p>
+                <p>◦ Aces win against any face cards.</p>
+                <p>◦ Aces win against any card that shares a suit with them.</p>
+                <p>◦ A joker cannot attack, when a joker would attack it uses its ability instead. To use the joker, you
+                    have three options:</p>
+                <div class="list">
+                    <p>1. Cannon: Remove a card on any player's wall.</p>
+                    <p>2. Reveal: Reveal all cards on any player's wall.</p>
+                    <p>3. Reinforce: Add two cards to your own wall.</p>
+                </div>
+                <p>◦ Any card that attacks a Joker is defeated, and the joker also uses its ability.</p>
+            </div>
+            <p>• If your opponent's wall is empty, you then attack their garrison cards with your general until your
+                general is defeated or your opponent has no cards remaining in their garrison.</p>
+            <div class="list">
+                <p>◦ If you fail to defeat all of the cards in your opponent's garrison, your opponent immediately
+                    rebuilds their wall with 5 new cards from the top of their deck.</p>
+            </div>
+        </div>
+
+        <h1>Winning</h1>
+        <div class="list">
+            <p>• When a player has no cards remaining in their garrison, that player loses and takes no more turns.</p>
+            <p>• The last player with any cards in their garrison wins.</p>
+        </div>
+
+        <h1>Other Rules</h1>
+        <div class="list">
+            <p>• When a player has no cards remaining in their deck, that player shuffles their discard pile back into
+                their deck.</p>
+        </div>
+    </div>
+
+    <div class="page" data-page="decks">
         <div id="deck-select">
             <div class="deck" data-deck="stormlight-archive">The Stormlight Archive</div>
             <div class="deck" data-deck="court-of-the-dead">Court of the Dead</div>
@@ -18,10 +82,10 @@
 
         <div id="deck-display">
             <div class="deck" data-deck="stormlight-archive">
-                <p>Lorem ipsum</p>
+                <p>Rules for the stormlight archive deck</p>
             </div>
             <div class="deck" data-deck="court-of-the-dead">
-                <p>Dolor sit amet</p>
+                <p>Rules for the court of the dead deck</p>
             </div>
         </div>
     </div>
