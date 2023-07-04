@@ -19,9 +19,14 @@
 
 <div id="page-display">
     <div class="page" data-page="rules">
+        <h1>Introduction</h1>
+        <p>Castles is a turn based card game meant to be played with themed poker cards, but plain old Bicycle cards
+            will work just as well. The game can be played with just the rules on this page, or each player can use the
+            special rules from any one of the decks on the <a href="/castles/#decks">Decks</a> page</p>
+
         <h1>Setting Up</h1>
         <div class="list">
-            <p>• Give each player a standard 52-card deck with 2 jokers added. Each player shuffles their deck.</p>
+            <p>• Each player shuffles their deck: a standard 52-card deck with 2 jokers added.</p>
             <p>• The Wall: Each player sets 5 cards on the table face-down in landscape orientation.</p>
             <p>• The Garrison: Each player sets 3 cards on the table face-down in portrait orientation.</p>
             <p>• The Hand: Each player draws 3 cards from the deck as their starting hand. Players may keep their hand
@@ -33,31 +38,39 @@
         <div class="list">
             <p>• Draw until you have 5 cards in your hand.</p>
             <p>• The player to your left at the start of your turn is your opponent for this turn.</p>
-            <p>• Select one card as your army, and one card as your general for this turn.</p>
+            <p>• Play one card as your army, and one card as your general for this turn.</p>
             <p>• With your army card, you must attack your opponent's wall cards until your army card is defeated or
                 your opponent has no cards remaining on their wall.</p>
-            <p>• To attack, compare the number on the two cards. The card with the lower number is usually defeated and
+            <p>• To attack: Select any of your opponent's wall cards. If that card is face-down, flip it face-up.
+                Compare the number on the two cards, the card with the lower number is usually defeated and
                 placed into the discard pile, with some exceptions:</p>
             <div class="list">
                 <p>◦ Aces have a value of 1. Jacks are 11, Queens are 12, and Kings are 13.</p>
                 <p>◦ If the lower number is exactly half the value of the higher number, the lower number wins. (Note
                     that this means Sixes beat Queens)</p>
-                <p>◦ Aces win against any face cards.</p>
-                <p>◦ Aces win against any card that shares a suit with them.</p>
-                <p>◦ A joker cannot attack, when a joker would attack it uses its ability instead. To use the joker, you
+                <p>◦ Aces defeat any face cards.</p>
+                <p>◦ Aces defeat any card that shares a suit with them.</p>
+                <p>◦ A joker cannot attack; when a joker would attack it uses its ability instead. To use the joker, you
                     have three options:</p>
                 <div class="list">
                     <p>1. Cannon: Remove a card on any player's wall.</p>
                     <p>2. Reveal: Reveal all cards on any player's wall.</p>
-                    <p>3. Reinforce: Add two cards to your own wall.</p>
+                    <p>3. Reinforce: Add two cards to any player's wall.</p>
                 </div>
                 <p>◦ Any card that attacks a Joker is defeated, and the joker also uses its ability.</p>
+                <p>◦ When attacking as a general, the Joker defeats any card.</p>
             </div>
+            <p>• If the two cards have the same number, both are defeated.</p>
+            <p>• If your army is defeated, the wall card remains face-up on the wall.</p>
+            <p>• If your army is NOT defeated, you must attack again until the army is defeated or your opponent's wall
+                is empty.</p>
             <p>• If your opponent's wall is empty, you then attack their garrison cards with your general until your
                 general is defeated or your opponent has no cards remaining in their garrison.</p>
             <div class="list">
                 <p>◦ If you fail to defeat all of the cards in your opponent's garrison, your opponent immediately
                     rebuilds their wall with 5 new cards from the top of their deck.</p>
+                <p>◦ If you defeat all of the cards in your opponent's garrison, that player loses and your turn is
+                    over.</p>
             </div>
         </div>
 
@@ -71,21 +84,303 @@
         <div class="list">
             <p>• When a player has no cards remaining in their deck, that player shuffles their discard pile back into
                 their deck.</p>
+            <p>• When a joker is revealed anywhere other than being played as a general, it uses its ability immediately
+                and is then discarded.</p>
+            <p>• If any player's last wall card is removed by means other than an attacking army (such as a Joker's
+                Cannon ability), the player to their right plays a general from their hand to attack the garrison.</p>
+            <div class="list">
+                <p>◦ This does not change the turn order.</p>
+            </div>
+            <p>• If a player must play a card from their hand but their hand is empty, they play the top card of their
+                deck instead.</p>
         </div>
     </div>
 
     <div class="page" data-page="decks">
+        <div class="deck-rules">
+            <h1>Keywords</h1>
+            <p>• <span class="keyword">Play</span>: Use this ability when you play this card as either your army or
+                your general.</p>
+            <p>• <span class="keyword">Army</span>: Use this ability when you play this card as your army.</p>
+            <p>• <span class="keyword">General</span>: Use this ability when you play this card as your general.</p>
+            <p>• <span class="keyword">Reaction</span>: Use this ability during any player's turn by discarding this
+                card from your hand. There will sometimes be a triggering event that must occur before you can play
+                this.</p>
+        </div>
+
         <div id="deck-select">
+            <h1>Decks</h1>
             <div class="deck" data-deck="stormlight-archive">The Stormlight Archive</div>
             <div class="deck" data-deck="court-of-the-dead">Court of the Dead</div>
         </div>
 
         <div id="deck-display">
             <div class="deck" data-deck="stormlight-archive">
-                <p>Rules for the stormlight archive deck</p>
+                <h1>Stormlight Archive Abilities</h1>
+                <!-- Spades -->
+                <div class="row">
+                    <div class="ability">
+                        <h1 class="card">
+                            K<i class="fa-solid fa-spade fa-sm" style="color: black;"></i>
+                            The Blackthorn
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: You and a player of your choice each discard a card
+                            from your garrison.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            Q<i class="fa-solid fa-spade fa-sm" style="color: black;"></i>
+                            Artifabrian
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: Add a card from your hand to your wall face-down.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            J<i class="fa-solid fa-spade fa-sm" style="color: black;"></i>
+                            Legendary Duelist
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Army</span>: The first time this card would be defeated, it wins
+                            instead.
+                        </p>
+                    </div>
+                </div>
+                <!-- Hearts -->
+                <div class="row">
+                    <div class="ability">
+                        <h1 class="card">
+                            K<i class="fa-solid fa-heart fa-sm" style="color: crimson;"></i>
+                            Windrunner
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">General</span>: Place a card from your hand face-up onto your wall.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            Q<i class="fa-solid fa-heart fa-sm" style="color: crimson;"></i>
+                            Honorspren
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: Select a face-up numbered card on your wall and turn
+                            it 45 degrees. While it remains on your wall, it is now a King.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            J<i class="fa-solid fa-heart fa-sm" style="color: crimson;"></i>
+                            Bridge Four Stew
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Army</span>: Play another army card. You can use either one
+                            each time you attack this turn, until either one is defeated.
+                        </p>
+                    </div>
+                </div>
+                <!-- Clubs -->
+                <div class="row">
+                    <div class="ability">
+                        <h1 class="card">
+                            K<i class="fa-solid fa-club fa-sm" style="color: black;"></i>
+                            Truthless
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">General</span>: This card defeats aces and jokers this turn. When
+                            defeated, the joker's ability does not activate. Your opponent chooses which cards you
+                            attack with your army and general this turn.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            Q<i class="fa-solid fa-club fa-sm" style="color: black;"></i>
+                            Lift & Wyndle
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: Draw three cards, then discard a card.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            J<i class="fa-solid fa-club fa-sm" style="color: black;"></i>
+                            Nightblood
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Army</span>: You must discard a card on any player's wall, then that
+                            player may discard a card on your wall. If that player chooses to do so, repeat this
+                            effect.
+                        </p>
+                    </div>
+                </div>
+                <!-- Diamonds -->
+                <div class="row">
+                    <div class="ability">
+                        <h1 class="card">
+                            K<i class="fa-solid fa-diamond fa-sm" style="color: crimson;"></i>
+                            Soulcaster
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Reaction</span>: Swap your opponent's army and general.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            Q<i class="fa-solid fa-diamond fa-sm" style="color: crimson;"></i>
+                            Lightweaving
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: Pick up any player's wall, shuffle it, and place it
+                            back face-down.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            J<i class="fa-solid fa-diamond fa-sm" style="color: crimson;"></i>
+                            Warform
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Reaction</span>: When a card is attacked, increase its
+                            number value by 3 during that attack.
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="deck" data-deck="court-of-the-dead">
-                <p>Rules for the court of the dead deck</p>
+                <h1>Court of the Dead Abilities</h1>
+                <!-- Spades -->
+                <div class="row">
+                    <div class="ability">
+                        <h1 class="card">
+                            K<i class="fa-solid fa-spade fa-sm" style="color: black;"></i>
+                            Grave Lord
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: Move up to three numbered cards or aces from your
+                            discard pile to your wall.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            Q<i class="fa-solid fa-spade fa-sm" style="color: black;"></i>
+                            Fallen Paladin
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: Move an ace from your discard pile to your garrison
+                            face-up.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            J<i class="fa-solid fa-spade fa-sm" style="color: black;"></i>
+                            Skeletal Chaplain
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: Move a numbered card from your discard pile
+                            to your garrison face-up.
+                        </p>
+                    </div>
+                </div>
+                <!-- Hearts -->
+                <div class="row">
+                    <div class="ability">
+                        <h1 class="card">
+                            K<i class="fa-solid fa-heart fa-sm" style="color: crimson;"></i>
+                            Bloodshaping
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Reaction</span>: Even numbers defeat odd numbers this turn.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            Q<i class="fa-solid fa-heart fa-sm" style="color: crimson;"></i>
+                            The Sacrifice
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Reaction</span>: Discard a card from your wall. No other cards can be
+                            removed from your wall this turn.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            J<i class="fa-solid fa-heart fa-sm" style="color: crimson;"></i>
+                            Night Stalker
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Army</span>: Discard a face-down card from all other player's walls.
+                        </p>
+                    </div>
+                </div>
+                <!-- Clubs -->
+                <div class="row">
+                    <div class="ability">
+                        <h1 class="card">
+                            K<i class="fa-solid fa-club fa-sm" style="color: black;"></i>
+                            Soulbinder
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Play</span>: Choose a card on your wall and turn it 45 degrees. As
+                            long as that card remains on your wall, in a turn where that card is defeated and your
+                            entire wall is not defeated, return it to your wall at the end of the turn.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            Q<i class="fa-solid fa-club fa-sm" style="color: black;"></i>
+                            Demon Caller
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">General</span>: For each face-up card on your opponent's wall, play
+                            the top card of your deck to fight it.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            J<i class="fa-solid fa-club fa-sm" style="color: black;"></i>
+                            Abomination
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Army</span>: Combine two even or two odd numbered cards from your
+                            discard into one card with the sum of their values and place it onto your wall face-up.
+                        </p>
+                    </div>
+                </div>
+                <!-- Diamonds -->
+                <div class="row">
+                    <div class="ability">
+                        <h1 class="card">
+                            K<i class="fa-solid fa-diamond fa-sm" style="color: crimson;"></i>
+                            Forbidden Tome
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">General</span>: Choose a player, each of you discards a card from your
+                            hand. The player whose card defeats the other's moves a face card from their discard onto
+                            their wall face-up.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            Q<i class="fa-solid fa-diamond fa-sm" style="color: crimson;"></i>
+                            Silent Occultist
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Reaction</span>: Another card's ability is ignored this turn.
+                        </p>
+                    </div>
+                    <div class="ability">
+                        <h1 class="card">
+                            J<i class="fa-solid fa-diamond fa-sm" style="color: crimson;"></i>
+                            Chained Reaper
+                        </h1>
+                        <p class="description">
+                            <span class="keyword">Army</span>: Cards defeated from an opponent's wall are added to your
+                            wall. Keep them separate, when discarded they return to their owner's discard pile.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

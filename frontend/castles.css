@@ -1,4 +1,5 @@
-* {
+p,
+div {
     color: #d5dde2;
     padding: 0;
     margin: 0;
@@ -7,8 +8,12 @@
 }
 
 h1 {
+    color: #d5dde2;
     font-size: 24px;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0;
     margin: 8px;
+    text-align: center;
 }
 
 p {
@@ -24,6 +29,8 @@ html,
 body {
     min-width: 100%;
     min-height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -72,6 +79,13 @@ body {
     flex-flow: column nowrap;
 }
 
+#deck-display .deck {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
 #page-display .page.active {
     display: flex;
 }
@@ -81,6 +95,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
+    align-self: center;
 }
 
 #deck-select.active {
@@ -88,6 +103,9 @@ body {
 }
 
 #deck-select .deck {
+    background: #49546180;
+    border-radius: 4px;
+    padding: 4px;
     margin: 6px 12px;
     font-size: 24px;
     cursor: pointer;
@@ -97,10 +115,45 @@ body {
     color: #aac9e7;
 }
 
+#deck-display {
+    display: flex;
+    align-self: center;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
 #deck-display .deck {
     display: none;
 }
 
 #deck-display .deck.active {
     display: flex;
+}
+
+.deck-rules {
+    align-self: center;
+}
+
+.keyword {
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: start;
+}
+
+.ability {
+    margin: 12px;
+    background: #324051;
+    padding: 4px;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.ability .card {
+    font-size: 24px;
 }
